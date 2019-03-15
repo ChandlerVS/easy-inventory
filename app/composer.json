@@ -1,0 +1,21 @@
+{
+    "name": "chandlervs/easy-inventory",
+    "description": "An easy to use open source inventory system for small businesses",
+    "type": "project",
+    "license": "AGPL-3.0-only",
+    "authors": [
+        {
+            "name": "Chandler Van Scoy",
+            "email": "chandler@chandlervanscoy.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChandlerVS\\EasyInventory\\": "lib/",
+            "ChandlerVS\\EasyInventory\\Controllers\\": "controllers/"
+        }
+    }
+}

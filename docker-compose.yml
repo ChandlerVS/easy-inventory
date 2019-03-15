@@ -3,16 +3,18 @@ version: '3'
 services:
   webserver:
     image: chandlervs/apache-php
+    volumes:
+    - ./app:/var/www/html:Z
     ports:
-      - 80:80
+    - 80:80
     env_file:
-      - .env
+    - .env
   mysql:
     image: mysql:5.7
     volumes:
-      - inv-data:/var/lib/mysql
+    - inv-data:/var/lib/mysql
     env_file:
-      - .env
+    - .env
 
 volumes:
   inv-data:
