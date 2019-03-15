@@ -2,6 +2,7 @@
 namespace ChandlerVS\EasyInventory\Controllers;
 
 Use ChandlerVS\EasyInventory\App;
+Use ChandlerVS\EasyInventory\Item;
 
 class DashboardController
 {

@@ -11,7 +11,8 @@
     ],
     "require": {
         "bramus/router": "^1.4",
-        "twig/twig": "^2.7"
+        "twig/twig": "^2.7",
+        "ezsql/ezsql": "^3.1"
     },
     "autoload": {
         "psr-4": {

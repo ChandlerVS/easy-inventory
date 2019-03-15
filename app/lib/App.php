@@ -11,10 +11,12 @@ class App
 
     static $router = null;
     static $twig = null;
+    static $db = null;
     var $controllers = [];
 
     public function __construct()
     {
+        self::$db = new \ezSQL_mysqli(getenv("MYSQL_USER"), getenv("MYSQL_PASSWORD"), getenv("MYSQL_DATABASE"), getenv("MYSQL_HOST"));
         self::$router = new Router();
         self::$twigLoader = new FilesystemLoader('views');
         self::$twig = new Environment(self::$twigLoader, [
