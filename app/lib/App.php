@@ -1,17 +1,26 @@
 <?php
 namespace ChandlerVS\EasyInventory;
 
-
 use Bramus\Router\Router;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 class App
 {
+    private static $twigLoader = null;
+
     static $router = null;
+    static $twig = null;
     var $controllers = [];
 
     public function __construct()
     {
         self::$router = new Router();
+        self::$twigLoader = new FilesystemLoader('views');
+        self::$twig = new Environment(self::$twigLoader, [
+            'cache' => 'cache',
+            'debug' => getenv('DEBUG_MODE')
+        ]);
     }
 
     public function run() {

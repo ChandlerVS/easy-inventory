@@ -7,8 +7,12 @@ class DashboardController
 {
     public function __construct()
     {
+        $this->registerRoutes();
+    }
+
+    private function registerRoutes() {
         App::$router->get('/', function() {
-            echo "Home From Controller";
+            App::$twig->display("home.twig", []);
         });
     }
 }

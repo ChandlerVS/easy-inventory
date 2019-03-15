@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "bramus/router": "^1.4"
+        "bramus/router": "^1.4",
+        "twig/twig": "^2.7"
     },
     "autoload": {
         "psr-4": {
