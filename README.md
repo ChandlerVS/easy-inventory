@@ -10,4 +10,7 @@ MYSQL_DATABASE=database-name
 MYSQL_USER=database-user
 MYSQL_PASSWORD=database-password
 MYSQL_RANDOM_ROOT_PASSWORD=yes
+MYSQL_HOST=mysql
+
+DEBUG_MODE=true
 ```
